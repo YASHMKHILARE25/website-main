@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="home.css" />
+    <script
+      src="https://kit.fontawesome.com/eedbcd0c96.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="header">
+        <div class="logo">
+          <a href="#" onclick="window.location.href='home.html';">
+            <img src="imgs/Tanisha.png" alt="" class="imglogo" />
+          </a>
+        </div>
+  
+        <div>
+          <ul id="navbar">
+            <li>
+              <a href="home.html">Home</a>
+            </li>
+  
+            <li>
+              <a href="shop-page-1.html">Shop</a>
+            </li>
+  
+            <li>
+              <a href="about.html">About</a>
+            </li>
+  
+            <li>
+              <a href="contact.html" class="active">Contact</a>
+            </li>
+            <li><a href="myAccount.html">My Account</a></li>
+  
+            <div class="js-shop-quantity pro-quantity"></div>
+            <li>
+              <i
+                id="shopbag"
+                class="fa-sharp fa-solid fa-cart-shopping js-cart-click"
+              ></i>
+            </li>
+            <a href="#" id="close" onclick="remove()"
+              ><i class="fa-solid fa-xmark"></i
+            ></a>
+          </ul>
+        </div>
+        <div id="mobile">
+          <div class="js-shop-quantity pro-quantity"></div>
+          <i class="fa-sharp fa-solid fa-cart-shopping js-cart-click"></i>
+          <i id="bar" class="fas fa-outdent" onclick="show()"></i>
+        </div>
+    </section>
+
+    <section id="pageheader" class="contactheader">
+      <h2>#SweetConnections</h2>
+      <p>Reach Out to Us for Your Cake Desires!</p>
+    </section>
+
+    <section id="contact-details" class="section-p1">
+      <div class="details">
+        <span>Get In Touch</span>
+        <h2>Visit our location or contact us today</h2>
+        <h3>Shop Address</h3>
+        <div class="contact-address">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Address : THE ADDRESS VISTA, Next to R city moll opposite, Lal Bahadur Shastri Marg, Mumbai, 400086.</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <p>Phone : +91 9833141518</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-clock"></i>
+            <p>Hours : 10:00 am - 10:30 pm</p>
+          </li>
+        </div>
+      </div>
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60326.047891164766!2d72.81266212463376!3d19.091066542130022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c76ce80b8657%3A0x630a0c9dd244ed37!2sdeath%20by%20chocolate!5e0!3m2!1sen!2sin!4v1731237462867!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <section class="contact-container">
+      <h2>Contact Form</h2>
+      <form id="contact_form">
+        <div class="contact-col">
+          <label for="first_name">First Name</label>
+          <input
+            type="text"
+            required
+            maxlength="50"
+            id="first_name"
+            name="first_name"
+          />
+
+          <label for="last_name">Last Name</label>
+          <input
+            type="text"
+            required
+            maxlength="50"
+            id="last_name"
+            name="last_name"
+          />
+
+          <label for="email_addr">Email address</label>
+          <input
+            type="email"
+            required
+            maxlength="50"
+            id="email_addr"
+            name="email"
+          />
+
+          <label for="phone_input">Phone</label>
+          <input
+            type="tel"
+            required
+            maxlength="50"
+            id="phone_input"
+            name="Phone"
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            class="contact-message"
+            id="message"
+            name="message"
+            rows="5"
+          ></textarea>
+
+          <div class="contact-btn">
+            <button type="submit">Send</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section id="newslater">
+      <div class="newstxt">
+        <h4>Sign up for Newsletters</h4>
+        <p>Get E-mail updates about our latest cakes and special offers.</p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Your E-mail Address" />
+        <button>Sign Up</button>
+      </div>
+    </section>
+
+    <footer class="section-p1">
+      <div class="col">
+        <h4>Contact</h4>
+        <p>
+          <strong>Address : </strong>THE ADDRESS VISTA, Next to R city moll opposite, Lal Bahadur Shastri Marg, Mumbai, 400086.
+        </p>
+        <p><strong>Phone : </strong>+91 9833141518</p>
+        <p><strong>Hours : </strong>10:00 am - 10:30 pm</p>
+
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="myAccount.html">SIgn In</a>
+        <a href="cart.html">View Cart</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="col">
+        <img src="imgs/footlogo-branches.png" alt="" class="footlogo-branch" />
+        <p>Secured payment Gateways</p>
+        <img src="imgs/ppay.png" alt="" class="footlogo3" />
+      </div>
+
+      <div class="copyright">
+        <p>Copyright @ 2024 by Death by Chocolate's Cake Shop - Html Css Js</p>
+      </div>
+    </footer>
+
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/products.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>

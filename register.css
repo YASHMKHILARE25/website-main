@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #333;
+}
+
+/* Header Styles */
+#header {
+    align-items: center;
+    background-color: black;
+    box-shadow: 0 30px 60px rgba(255, 215, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 15px 80px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .imglogo {
+    width: 100%;
+    height: 120%;
+}
+
+.logo {
+    height: 55px;
+}
+
+  .logo a {
+    background-color: transparent;
+  }
+  
+  #navbar {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #navbar li {
+    background-color: black;
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  #navbar li a {
+    background-color: black;
+    color: #eff1db;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    transition: 0.5s ease;
+  }
+  
+  .fa-solid {
+    background-color: transparent;
+    color: white;
+  }
+  
+  #navbar li a:hover {
+    color: gold;
+  }
+  
+  #navbar li a:hover,
+  #navbar li a.active {
+    color: gold;
+  }
+  
+  #navbar li a.active::after,
+  #navbar li a:hover::after {
+    background-color: gold;
+    bottom: -4px;
+    content: "";
+    height: 2px;
+    left: 20px;
+    position: absolute;
+    width: 30%;
+  }
+/* Registration Section */
+#register {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.account-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Link to Sign In */
+p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer .col {
+    margin-bottom: 20px;
+}
+
+footer .copyright {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}

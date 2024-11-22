@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - My Account</title>
+    <link rel="stylesheet" href="register.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <section id="header">
+        <div class="logo">
+            <a href="home.html">
+                <img src="imgs/Tanisha.png" alt="Logo" class="imglogo" />
+            </a>
+        </div>
+        <ul id="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="shop-page-1.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="myAccount.html">My Account</a></li>
+        </ul>
+    </section>
+
+    <div id="register">
+        <h2>Create an Account</h2>
+        <form action="/api/auth/register" method="post" id="register-form" class="account-container">
+            <div class="register-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit">Register</button>
+            </div>
+        </form>
+        <p>Already have an account? <a href="myAccount.html">Sign in here</a></p>
+    </div>
+
+    <footer>
+        <div class="col">
+            <h4>Contact</h4>
+            <p>
+                <strong>Address : </strong>THE ADDRESS VISTA, Next to R city moll opposite, Lal Bahadur Shastri Marg,
+                Mumbai, 400086
+            </p>
+            <p><strong>Phone : </strong>+91 9833141518</p>
+            <p><strong>Hours : </strong>10:00 am - 10:30 pm</p>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ 2024 by Death by Chocolate's Cake Shop - Html Css Js</p>
+        </div>
+    </footer>
+
+    <script>
+        // Handle registration form submission
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form data
+            const username = document.getElementById('registerUsername').value;
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+
+            // Perform validation (optional)
+            if (!username || !email || !password) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Send registration data to the server
+            fetch('/api/auth/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, email, password })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Registered successfully!');
+                    window.location.href = 'myAccount.html'; // Redirect to login page after successful registration
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('There was an error during registration');
+                });
+        });
+    </script>
+
+    <!-- <script src="scripts/cart.js"></script> -->
+    <!-- <script src="home.js"></script> -->
+</body>
+
+</html>
